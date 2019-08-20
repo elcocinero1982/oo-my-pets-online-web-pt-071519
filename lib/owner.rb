@@ -16,6 +16,8 @@ class Owner
     name = Dog.new(name)
     @pets[:dogs] << name 
   end 
-  
+  def save 
+    @@all << self 
+  end 
   
 end 
