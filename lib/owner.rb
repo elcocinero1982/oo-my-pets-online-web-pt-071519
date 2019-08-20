@@ -8,7 +8,7 @@ class Owner
   def initialize(species)
     @species = species
     @@all << self
-    @pets = {:fishes => [], :dogs => [], :cats => []}
+    @pets = {:dogs => [], :cats => []}
   end
 
   def say_species
@@ -17,9 +17,7 @@ class Owner
 
   # Pets #
 
-  def buy_fish(name_of_fish)
-    @pets[:fishes] << Fish.new(name_of_fish)
-  end
+  
 
   def buy_dog(name_of_dog)
     @pets[:dogs] << Dog.new(name_of_dog)
@@ -49,12 +47,7 @@ class Owner
     end
   end
 
-  def feed_fish
-    @pets.collect do |species, instances|
-      if species == :fishes
-        instances.each do |fish|
-          fish.mood = "happy"
-        end
+ 
       end
     end
   end
