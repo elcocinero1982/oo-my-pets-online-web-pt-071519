@@ -19,6 +19,16 @@ class Owner
   def save 
     @@all << self 
   end 
-  
+  def self.count 
+   @@all.length
+ end 
+ 
+ def self.reset_all
+   @@all = []
+ end 
+ 
+ def say_species 
+   "I am a #{species}." 
+ end 
   
 end 
